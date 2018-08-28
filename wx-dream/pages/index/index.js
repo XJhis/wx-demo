@@ -4,9 +4,16 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello Worlds',
     userInfo: {},
     hasUserInfo: false,
+    list: [
+      { name: 'asd', age: 18, id: '1' },
+      { name: 'df', age: 28, id: '2' },
+      { name: 'nm', age: 38, id: '3' },
+      { name: 'auiu', age: 48, id: '4' },
+    ],
+    array: [1, 2, 3, 4, 5, 6, 7, 8, 9],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -14,6 +21,9 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  tapName(e) {
+    console.log(e)
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

@@ -8,6 +8,15 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto" bindtap="tapName">{{motto}}</text>
+  </view>
+
+  <view wx:for="{{array}}" wx:for-item="i">
+
+    <view wx:for="{{array}}" wx:for-item="j">
+      <view wx:if="{{i <= j}}">
+        {{i}} * {{j}} = {{i * j}}
+      </view>
+    </view>
   </view>
 </view>
